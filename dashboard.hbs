@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Dashboard</h2>
+    <p>Hello, {{user.username}}. You are logged in as {{user.role}}.</p>
+    {{#if isAdmin}}
+      <p><a href="/admin">Go to Admin Dashboard</a></p>
+    {{/if}}
+    <!-- Button to trigger the vote form load -->
+    <button id="loadVote">Vote Now</button>
+
+    <!-- Add a little space below the button -->
+    <br><br>
+
+    <!-- Container where the vote form will appear -->
+    <div id="voteContainer"></div>
+    
+    <p><a href="/logout">Logout</a></p>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>

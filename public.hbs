@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Election Update</title>
+</head>
+<body>
+  <h2>Election Update</h2>
+  
+  {{#if articles}}
+    <ul>
+      {{#each articles}}
+        <li>
+          <h3>{{this.title}}</h3>
+          {{#if this.description}}
+            <p>{{this.description}}</p>
+          {{/if}}
+          <p>
+            <a href="{{this.url}}" target="_blank">Read more</a>
+          </p>
+          <hr>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>No election news available at this time.</p>
+  {{/if}}
+  
+  <p><a href="/dashboard">Back to Dashboard</a></p>
+</body>
+</html>

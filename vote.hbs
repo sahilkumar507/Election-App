@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cast Your Vote</title>
+</head>
+<body>
+  <h2>Cast Your Vote</h2>
+  <p>Hello, {{user.username}}. Select your preferred candidate:</p>
+  <!-- Add an id for the form for JS targeting -->
+  <form id="voteForm" action="/vote" method="post">
+    <label>
+      <input type="radio" name="candidate" value="Donald Trump" required>
+      Donald Trump
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="candidate" value="Joe Biden" required>
+      Joe Biden
+    </label>
+    <br>
+    <button type="submit">Submit Vote</button>
+  </form>
+  <!-- Placeholder element for AJAX response -->
+  <div id="voteResult"></div>
+  <p><a href="/dashboard">Back to Dashboard</a></p>
+  <!-- Include the client-side JavaScript file -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
